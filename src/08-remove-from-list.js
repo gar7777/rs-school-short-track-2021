@@ -18,13 +18,10 @@
  */
 
 function removeKFromList(l, k) {
-  const arr = [];
-  l.forEach((item) => {
-    if (item !== k) {
-      arr.push(item);
-    }
-  });
-  return arr;
+  if (l.value === k) {
+    l.value.delete(k);
+  }
+  return l;
 }
 
 module.exports = removeKFromList;
